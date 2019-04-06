@@ -1,41 +1,43 @@
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
+
+interface IApp {}
 
 export default class App extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor(props: IApp) {
+    super(props)
 
     this.state = {
-      counter: 0
-    };
+      counter: 0,
+    }
 
-    this.handleCounter = this.handleCounter.bind(this);
+    this.handleCounter = this.handleCounter.bind(this)
   }
 
   handleCounter = () => {
-    const { counter } = this.props;
+    const { counter } = this.props
 
-    counter++;
+    counter++
 
     this.setState({
-      counter
-    });
-  };
+      counter,
+    })
+  }
 
   render() {
     return (
       <View style={styles.container}>
         <Text>Open up App.js to start working on your app!</Text>
       </View>
-    );
+    )
   }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
-  }
-});
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+})
